@@ -1,0 +1,105 @@
+body {
+    background-color: #B9C9F0;
+    font-family: "Oxanium", Arial, sans-serif;
+    color: #2858F0;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #3A29F0;
+    font-family: "Alfa Slab One", serif;
+    margin-bottom: 20px;
+}
+
+.header-font {
+    font-family: "Alfa Slab One", serif;
+    color: #3A29F0;
+}
+
+.event-list {
+    list-style-type: none;
+    color: #7B29F0;
+    font-family: "Alfa Slab One", serif;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.nav {
+    list-style-type: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #3A29F0;
+    font-weight: bold;
+}
+
+
+.image-resize {
+    width: 700px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.music-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.music-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 12px;
+    font-size: 22px;
+    color: #3A29F0;
+    font-weight: bold;
+}
+
+.thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #3A29F0;
+}
+
+.listen-links {
+    margin-top: 20px;
+}
+
+.listen-links p {
+    font-weight: bold;
+    font-size: 22px;
+    color: #3A29F0;
+    margin-bottom: 15px;
+}
+
+
+.icon i {
+    font-size: 65px;
+    margin: 10px;
+}
+
+
+.spotify i {
+    color: #1DB954;
+}
+
+
+.youtube i {
+    color: #FF0000;
+}
+
+
