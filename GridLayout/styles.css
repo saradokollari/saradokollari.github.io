@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background-color: #000;
+}
+
+.top-white {
+    background-color: #DCE0E9;
+    height: 50px;
+}
+
+.top-gray {
+    background-color: #798292;
+    height: 90px;
+}
+
+.thin-white-separator {
+    background-color: #ffffff;
+    height: 1px;
+}
+
+.main-section {
+    display: flex;
+    height: 900px; 
+}
+
+.left-blue {
+    background-color: #385795;
+    flex: 1;
+}
+
+.right-darkgray {
+    background-color: #4D586E;
+    flex: 2;
+}
+
+.bottom-red {
+    background-color: #510811;
+    height: 75px;
+}
