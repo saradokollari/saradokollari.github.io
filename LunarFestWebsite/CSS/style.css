@@ -1,0 +1,794 @@
+/* 1. Font Imports */
+
+@font-face {
+    font-family: 'Copperplate';
+    src: url('../WebReadyAssets/copperplate-gothic-std/Copperplate-Gothic-Std-31-BC.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SegoeUI';
+    src: url('../WebReadyAssets/SegoeUIHistoric.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LemonMilk-Medium';
+    src: url('../WebReadyAssets/lemon_milk/LEMONMILK-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BabelSans-Bold';
+    src: url('../WebReadyAssets/BabelSans/BabelSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GillSans-Custom';
+    src: url('../WebReadyAssets/gillsansmt.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'LemonMilk-Bold';
+    src: url('../WebReadyAssets/lemon_milk/LEMONMILK-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'LemonMilk-Light';
+    src: url('../WebReadyAssets/lemon_milk/LEMONMILK-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('../WebReadyAssets/bahnschrift.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LucidaBright-Custom';
+    src: url('../WebReadyAssets/lucidabright.ttf') format('truetype');
+}
+
+/* 2. Global Settings */
+
+body {
+    background: linear-gradient(141deg, #000000, #02123e);
+    background-size: cover; /* ensure background covers scrolling */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+/* 3. Hero and Header */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* header Background */
+.header-main-bg {
+    background: linear-gradient(to right, #40e55f, #16e2cc);
+    padding: 0 !important;
+    position: relative;
+}
+
+.navbar-brand img {
+    height: 205px;
+    display: block;
+    margin: 0;
+}
+
+/* navigation Links */
+.nav-link {
+    font-family: 'Copperplate', sans-serif;
+    color: #000000 !important;
+    font-size: 21pt;
+    letter-spacing: 0.02em;
+    margin-left: 65px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #c92f97 !important; 
+}
+
+/* header date text */
+.header-date-text {
+    position: absolute;
+    bottom: 5px;    
+    right: 60px;    
+    font-family: 'SegoeUI', sans-serif;
+    color: #670061;
+    font-size: 19pt;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+/* purple bottom strip */
+.header-accent-strip {
+    background: radial-gradient(circle, #9c126d, #490c76);
+    height: 8px; 
+    width: 100%;
+    border: none;
+}
+
+/* 4. homepage transparency logic */
+
+/* transparent state */
+.navbar.home-transparent {
+    background: transparent !important;
+    box-shadow: none;
+}
+
+.home-transparent .header-date-text {
+    display: none !important;
+}
+
+.home-transparent .nav-link {
+    color: #ffffff !important;
+}
+
+/* login button colors */
+.nav-link.login-link {
+    color: #73066d !important; 
+    font-weight: bold; 
+}
+.home-transparent .nav-link.login-link {
+    color: #7dd8d7 !important; 
+}
+
+/* 5. info strip and Ticket Button */
+
+.info-strip {
+    background: linear-gradient(to right, #40e55f, #16e2cc);
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.info-text {
+    font-family: 'SegoeUI', sans-serif;
+    color: #670061;
+    font-size: 20pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ticket button styling */
+.btn-tickets {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 10;
+    padding: 9px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Copperplate', sans-serif;
+    font-size: 60pt;      
+    color: #39df5f;       
+    text-transform: uppercase;
+    border: 4px solid transparent;
+    background: 
+        linear-gradient(#3e094e, #3e094e) padding-box, 
+        linear-gradient(to right, #40e55f, #16e2cc) border-box;
+    transition: transform 0.2s ease;
+}
+
+.btn-tickets:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    color: #9af2bd;
+    cursor: pointer;
+}
+
+.ticket-text {
+    display: inline-block;
+    transform: scale(1, 1.2);
+    transform-origin: center;
+}
+
+/* 6. about section */
+
+.about-section {
+    padding: 160px 0; 
+    text-align: center;
+}
+
+.about-main-title {
+    font-family: 'LemonMilk-Medium', sans-serif;
+    color: #aa50d8;       
+    font-size: 50pt;
+    margin-bottom: 80px;  
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    animation: neonPulse 1s infinite;
+}
+
+.about-content-box {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-sub-header {
+    font-family: 'BabelSans-Bold', sans-serif;
+    color: #aa50d8;
+    font-size: 23pt;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.about-body-text {
+    font-family: 'BabelSans-Bold', sans-serif;
+    color: #ffffff;
+    font-size: 16pt;
+    line-height: 1.6;
+    font-weight: normal;
+    text-align: center;
+}
+
+.about-quote {
+    font-family: 'Gill Sans MT', 'Gill Sans', Calibri, sans-serif;
+    color: #aa50d8;
+    font-size: 26pt;
+    font-style: italic;
+    text-align: center;
+    margin-top: 60px;
+    display: block;
+}
+
+/* neon text animation */
+@keyframes neonPulse {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            0 0 10px rgba(170, 80, 216, 0.7),
+            0 0 50px rgba(170, 80, 216, 0.6),
+            0 0 80px rgba(170, 80, 216, 0.3);
+    }
+    20%, 24%, 55% {
+        text-shadow: none; 
+    }
+}
+
+/* 7. gallery section */
+
+.gallery-section {
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.gallery-title {
+    font-family: 'LemonMilk-Medium', sans-serif;
+    color: #abd7d5;       
+    font-size: 50pt;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* container frame */
+.gallery-frame {
+    background-color: #abd7d5; 
+    padding: 20px;             
+    max-width: 1100px;         
+    margin: 0 auto;            
+}
+
+.gallery-img {
+    width: 100%;                
+    height: 300px;             
+    object-fit: cover;         
+    cursor: pointer;           
+    transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* gallery controls */
+.gallery-section .carousel-control-prev,
+.gallery-section .carousel-control-next {
+    width: 60px;           
+    background: none;      
+    opacity: 1;            
+}
+
+.gallery-section .carousel-control-prev-icon,
+.gallery-section .carousel-control-next-icon {
+    width: 3rem;           
+    height: 3rem;
+}
+
+/* desktop arrows (outside frame) */
+@media (min-width: 992px) {
+    .gallery-section .carousel-control-prev { left: -100px; }
+    .gallery-section .carousel-control-next { right: -100px; }
+}
+
+/* mobile arrows (inside frame) */
+@media (max-width: 991px) {
+    .gallery-section .carousel-control-prev { left: -10px; }
+    .gallery-section .carousel-control-next { right: -10px; }
+}
+
+/* 9. global footer */
+
+.main-footer {
+    background: linear-gradient(to right, #40e55f, #16e2cc);
+    padding: 13px 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.main-footer a {
+    font-family: serif;
+    color: #8a35b5;        
+    font-size: 18pt;       
+    text-decoration: none; 
+    font-weight: bold;
+    margin: 0 60px;        
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* 11. tickets page styles */
+
+.tickets-header-section {
+    padding-top: 200px;   
+    padding-bottom: 60px; 
+    text-align: center;
+}
+
+.title-icon-wrapper {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 10px; 
+    width: 100%; 
+}
+
+.tickets-main-title {
+    font-family: 'LemonMilk-Medium', sans-serif;
+    color: #aa50d8;       
+    font-size: 80pt;      
+    text-transform: uppercase;
+    margin: 0;            
+    text-align: center;   
+    animation: neonPulse 1s infinite;
+}
+
+.ticket-icon {
+    height: 300px; 
+    width: auto;   
+    display: block;
+}
+
+/* flips the left icon to mirror the right one */
+.icon-flipped {
+    transform: scaleX(-1); 
+}
+
+.tickets-subtitle {
+    font-family: 'GillSans-Custom', sans-serif;
+    color: #dba5f7;       
+    font-size: 20pt;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+.tickets-body-text {
+    font-family: 'GillSans-Custom', sans-serif;
+    color: #ffffff;       
+    font-size: 20pt;
+    line-height: 1.4;
+    max-width: 1000px;    
+    margin: 0 auto;
+    margin-bottom: 50px; 
+    transform: scale(0.85);
+    transform-origin: top center;     
+}
+
+/* 12. Ticket Options List */
+
+.ticket-options-container {
+    max-width: 1320px; 
+    margin: 0 auto;
+    padding-bottom: 100px;
+    text-align: left;
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+.ticket-block {
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+/* option titles */
+.ticket-option-title {
+    font-family: 'LemonMilk-Medium', sans-serif;
+    font-size: 30pt;
+    text-decoration: underline; 
+    text-underline-offset: 8px; 
+    color: #35ba70;             
+    margin-bottom: 25px;
+}
+
+.ticket-option-title.vip-gold {
+    color: #d2c882;
+}
+
+.ticket-option-body {
+    font-family: 'BabelSans-Bold', sans-serif; 
+    font-size: 18pt;
+    color: white; 
+    line-height: 1.5;
+    margin-bottom: 35px;
+    padding-left: 25px; 
+}
+
+.text-purple {
+    color: #d45be6;
+}
+
+/* select button */
+.btn-ticket-select {
+    display: inline-block;
+    background-color: #f2ebd4; 
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-size: 32pt;
+    text-decoration: none;
+    padding: 4px 30px;
+    border-radius: 0px 15px 15px 15px; 
+    transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.btn-ticket-select:hover {
+    transform: scale(1.05); 
+    opacity: 0.9;
+}
+
+/* gradient divider line */
+.ticket-divider {
+    height: 1px; 
+    width: 90%;  
+    margin: 60px auto; 
+    border: none;
+    border-radius: 10px; 
+    background: linear-gradient(to right, #40e55f, #16e2cc);
+    opacity: 1;
+}
+
+/* 13. One-Day Pass Page - Login Promo */
+
+.login-promo-section {
+    padding-top: 250px; 
+    padding-right: 50px; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.login-promo-box {
+    border: 2px solid #ffffff; 
+    border-radius: 30px;       
+    padding: 15px 25px;        
+    background: transparent;   
+    text-align: left;          
+    max-width: 700px;          
+}
+
+.login-promo-text {
+    font-family: 'BabelSans-Bold', sans-serif;
+    font-size: 14pt;
+    color: white;
+    margin: 5px 0; 
+    list-style: none; 
+}
+
+.text-neon-green {
+    color: #28e3a7;
+}
+
+.link-gold {
+    color: #eacaa1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link-gold:hover {
+    color: #fff; 
+}
+
+/* 14. One-Day header styles */
+
+.oneday-header-section {
+    text-align: left;      
+    padding-top: 70px;     
+    padding-bottom: 50px;
+    padding-left: 100px;
+    transform: scale(0.9);
+    transform-origin: top center;
+}
+
+.oneday-main-title {
+    font-family: 'LemonMilk-Medium', sans-serif;
+    color: #aa50d8;        
+    font-size: 60pt;       
+    margin-bottom: 25px;
+}
+
+.oneday-subtitle {
+    font-family: 'GillSans-Custom', sans-serif;
+    color: white;
+    font-size: 18pt;
+    margin-bottom: 50px;   
+}
+
+/* 15. date and counter section */
+
+.date-header-text {
+    font-family: 'LemonMilk-Medium', sans-serif;
+    color: #28e4a7;       
+    font-size: 30pt;
+    margin-bottom: 10px;
+}
+
+.date-subheader-text {
+    font-family: 'GillSans-Custom', sans-serif;
+    color: #28e4a7;       
+    font-size: 17pt;
+    margin-bottom: 60px;  
+}
+
+.counter-section {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.counter-label {
+    font-family: 'GillSans-Custom', sans-serif;
+    color: white;
+    font-size: 20pt;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.counter-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* number box */
+.counter-display {
+    width: 90px;  
+    height: 70px; 
+    background-color: white;
+    border: 1px solid #aa50d8; 
+    color: black;
+    font-family: 'GillSans-Custom', sans-serif;
+    font-size: 35pt; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default; 
+}
+
+/* + - Buttons */
+.counter-btn {
+    width: 50px;   
+    height: 50px;  
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-family: 'GillSans-Custom', sans-serif;
+    font-size: 50pt;     
+    line-height: 0;  
+    padding-bottom: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s;
+}
+
+.counter-btn:active {
+    transform: scale(0.95); 
+}
+
+.btn-minus {
+    background: linear-gradient(to right, #40e55f, #16e2cc);
+    padding-bottom: 18px !important;
+}
+
+.btn-plus {
+    background: linear-gradient(to right, #16e2cc, #40e55f);
+}
+
+/* 16. Day selection list */
+
+.day-list-container {
+    padding-top: 0px;
+    padding-bottom: 100px;
+    max-width: 1550px; 
+    margin: 0 auto;   
+}
+
+.day-ticket-box {
+    background-color: #f2ebd4; 
+    padding: 25px 40px;
+    margin-bottom: 20px;       
+    border-radius: 0px 40px 40px 40px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.day-left-content {
+    flex: 1; 
+    text-align: left;
+    padding-right: 20px;
+}
+
+.day-title {
+    font-family: 'LemonMilk-Bold', sans-serif;
+    color: #35ba70; 
+    font-size: 38pt;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+.day-lineup {
+    font-family: 'Bahnschrift', sans-serif;
+    color: #ca35e5; 
+    font-size: 15pt;
+    margin: 0;
+    font-weight: 300;
+    font-stretch: condensed;
+}
+
+.day-right-content {
+    display: flex;
+    align-items: center; 
+    gap: 20px;           
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/* price styling */
+.price-group {
+    color: black;
+    line-height: 1; 
+}
+
+.price-label {
+    font-family: 'LemonMilk-Light', sans-serif;
+    font-size: 13pt;
+    margin-right: 5px;
+}
+
+.price-amount {
+    font-family: 'LemonMilk-Light', sans-serif;
+    font-size: 22pt;
+}
+
+.price-fees {
+    font-family: 'LucidaBright-Custom', serif;
+    font-size: 17pt;
+    margin-left: 5px;
+}
+
+/* buy button */
+.btn-buy-day {
+    background-color: black;
+    color: #f2ebd4;       
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 300;       
+    font-stretch: condensed;
+    font-size: 30pt;
+    text-decoration: none;
+    padding: 0px 40px;    
+    line-height: 1.5;
+    border-radius: 15px;  
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+.btn-buy-day:hover {
+    transform: scale(1.05);
+    color: #b5348c;
+}
+
+/* description text */
+.day-description {
+    font-family: 'LemonMilk-Light', sans-serif;
+    color: #f2ebd4; 
+    font-size: 13pt;
+    text-align: left;
+    max-width: 90%;
+    margin: 20px auto 65px auto; 
+    line-height: 1.4;
+}
+
+/* special fix for the last item (Sunday) to be closer to divider */
+.day-block:last-child .day-description {
+    margin-bottom: 10px !important; 
+}
+
+/* 17. upgrade promo section */
+
+.upgrade-section {
+    text-align: center;
+    padding-bottom: 80px; 
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+.upgrade-header {
+    font-family: 'GillSans-Custom', sans-serif;
+    color: #aa50d8;        
+    font-size: 26pt;
+    margin-bottom: 20px;
+    margin-top: 0px;      
+}
+
+.upgrade-text {
+    font-family: 'GillSans-Custom', sans-serif;
+    color: #f2ebd4;        
+    font-size: 20pt;
+    max-width: 900px;      
+    margin: 0 auto 50px auto; 
+    line-height: 1.5;
+}
+
+.upgrade-link {
+    color: #f2ebd4;        
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.upgrade-link:hover {
+    color: #2be49f;          
+}
+
+.btn-explore {
+    display: inline-block;
+    background-color: #f2ebd4; 
+    color: black;              
+    font-family: 'LemonMilk-Bold', sans-serif;
+    font-size: 15pt;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;       
+    transition: transform 0.2s;
+}
+
+.btn-explore:hover {
+    transform: scale(1.05);
+}
+
+/* fix for divider in Upgrade section */
+.upgrade-section .ticket-divider {
+    margin-top: 0px !important;
+}
